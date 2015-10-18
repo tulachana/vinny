@@ -1,11 +1,11 @@
 
-<project name="Service" default="war" basedir=".">
+<project name="Galaxyweb" default="war" basedir=".">
 
 
 	<!-- Define the properties used by the build -->
 
 	<property environment="env" />
-	<property name="app.name"      value="service"/>
+	<property name="app.name"      value="Galaxyweb"/>
 	<property name="work.dir"    value="work"/>
 	<property name="war.dir"     value="war"/>
 	<property name="src.dir"      value="src"/>
@@ -20,7 +20,7 @@
 		</fileset>
 	</path>
 
-	<target name="clean" description="Delete old directories">
+	<target name="clean" description="  Delete old directories">
 		<delete dir="${work.dir}"/>
 		<delete dir="${war.dir}"/>
 	</target>
@@ -29,7 +29,8 @@
 		<mkdir  dir="${war.dir}"/>
 		<mkdir  dir="${work.dir}/WEB-INF/classes"/>
 	</target>
-
+<mkdir  dir="${to.dir}"/>
+		<mkdir  dir="${to.dir}/WEB-INF/classes"/>
 	<target name="compile" depends="prepare" description="Compile Java sources and copy to WEB-INF/classes dir">
 		<javac srcdir="${src.dir}" destdir="${work.dir}/WEB-INF/classes">
 			<classpath refid="compile.classpath"/>
