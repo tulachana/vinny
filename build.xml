@@ -1,5 +1,5 @@
 
-<project name="Galaxywe b" default="war" basedir=".">
+<project name="Galaxyweb" default="war" basedir=".">
 
 
 	<!-- Define the properties used by the build -->
